@@ -1,0 +1,206 @@
+/* ==========================================================================
+   FAQ SECTION — ANIMATED ACCORDION WITH LUXURY STYLING
+   ========================================================================== */
+
+.aari-faq {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.aari-faq::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  opacity: 0.35;
+}
+
+.aari-faq__wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Accordion Container ── */
+.aari-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Accordion Item ── */
+.aari-accordion-item {
+  background: var(--surface-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.aari-accordion-item::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px dashed transparent;
+  border-radius: calc(var(--radius-lg) - 5px);
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.aari-accordion-item.open {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(212, 175, 55, 0.12);
+}
+
+.aari-accordion-item.open::before {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* ── Accordion Header Button ── */
+.aari-accordion-header {
+  width: 100%;
+  padding: 1.4rem 1.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  gap: 1.25rem;
+  transition: background 0.2s ease;
+}
+
+.aari-accordion-header:hover {
+  background: rgba(212, 175, 55, 0.03);
+}
+
+/* Gold number */
+.aari-accordion-num {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  opacity: 0.7;
+  flex-shrink: 0;
+  min-width: 2.5rem;
+}
+
+.aari-accordion-item.open .aari-accordion-num {
+  opacity: 1;
+}
+
+/* Question text */
+.aari-accordion-question {
+  flex: 1;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.38;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.aari-accordion-item.open .aari-accordion-question {
+  color: var(--gold-primary);
+}
+
+/* Chevron icon */
+.aari-accordion-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.aari-accordion-item.open .aari-accordion-icon {
+  opacity: 1;
+}
+
+/* ── Collapse / Content ── */
+.aari-accordion-collapse {
+  overflow: hidden;
+}
+
+.aari-accordion-body {
+  padding: 0 1.85rem 1.65rem 4rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: 1.1rem;
+  margin: 0 1.85rem;
+}
+
+/* ── Support Strip ── */
+.aari-faq__support-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 2.25rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.aari-faq__support-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.support-strip-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 580px;
+}
+
+.support-strip-content h4 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.support-strip-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .aari-accordion-header {
+    padding: 1.15rem 1.25rem;
+    gap: 0.75rem;
+  }
+
+  .aari-accordion-question {
+    font-size: 1rem;
+  }
+
+  .aari-accordion-body {
+    padding: 0 1.25rem 1.35rem 1.25rem;
+    margin: 0 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .aari-faq__support-strip {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.35rem;
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Priyadarshini M.",
+    "role": "Bride · Hyderabad",
+    "city": "Hyderabad",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+    "rating": 5,
+    "outfit": "Muhurtham Peacock Bridal Blouse & Saree Pallu",
+    "text": "The precision on my Muhurtham blouse was beyond anything I envisioned! The 3D peacock feathers and bullion wire stayed intact through all the rituals. Every single guest complimented the royal zari shine. Aariwork is truly an atelier of master artists.",
+    "date": "February 2026"
+  },
+  {
+    "id": 2,
+    "name": "Ananya Ranganathan",
+    "role": "Bride · London, UK",
+    "city": "London, UK",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+    "rating": 5,
+    "outfit": "Custom Floral Jaal Silk Blouse with Temple Kundan",
+    "text": "Living in London, I was anxious about ordering a custom hand-embroidered blouse remotely. The team sent me weekly video updates from the adda frame! When the package arrived, the fit was millimetre-perfect. The craft is pure poetry.",
+    "date": "January 2026"
+  },
+  {
+    "id": 3,
+    "name": "Shivani & Kunal Singhania",
+    "role": "Bride · Sangeet & Reception, Bengaluru",
+    "city": "Bengaluru",
+    "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&h=200&q=80",
+    "rating": 5,
+    "outfit": "Bespoke Emerald Architectural Velvet Lehenga",
+    "text": "They customized our wedding date and our initials discreetly woven into the floral jaal of my lehenga waist belt. The weight of the embroidery is balanced so well that I danced all night without strain. Absolute luxury experience.",
+    "date": "March 2026"
+  },
+  {
+    "id": 4,
+    "name": "Natasha Somani",
+    "role": "Bride · Destination Wedding, Udaipur",
+    "city": "Udaipur",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+    "rating": 5,
+    "outfit": "Shahi Darbar Cutwork Dupatta & Raw Silk Blouse",
+    "text": "Aariwork transformed a simple raw silk fabric into an heirloom piece. The cutwork scallops on the veil framed my face like vintage Mughal paintings. Worth every single rupee and artisan hour.",
+    "date": "November 2025"
+  },
+  {
+    "id": 5,
+    "name": "Meera Venkatakrishnan",
+    "role": "Mother of the Bride · Coimbatore",
+    "city": "Coimbatore",
+    "avatar": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&h=200&q=80",
+    "rating": 5,
+    "outfit": "Pure Kanjeevaram Saree Maggam Border Revival",
+    "text": "They restored and embellished my mother's 40-year-old wedding saree with new Aari zari borders without damaging the fragile silk. Their respect for traditional textiles is unmatched. True custodians of our heritage.",
+    "date": "December 2025"
+  },
+  {
+    "id": 6,
+    "name": "Kavitha Subramaniam",
+    "role": "Bride · Singapore",
+    "city": "Singapore",
+    "avatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=200&h=200&q=80",
+    "rating": 5,
+    "outfit": "Heritage Kanjivaram Blouse with Meenakari Detailing",
+    "text": "I cannot express how deeply moved I was when I unboxed my bridal blouse. The meenakari colors are so vibrant and the gold thread catches light in the most divine way. My mother-in-law said it looked like jewelry stitched into silk!",
+    "date": "October 2025"
+  }
+]

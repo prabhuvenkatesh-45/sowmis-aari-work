@@ -1,0 +1,36 @@
+.aari-cursor-needle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-4px, -20px);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
+  transition: filter 0.2s ease;
+}
+
+.aari-cursor--hover {
+  filter: drop-shadow(0 0 14px rgba(253, 230, 138, 0.95)) drop-shadow(0 0 4px #D4AF37);
+}
+
+.aari-cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-7px, -7px);
+  background: radial-gradient(circle, rgba(253, 230, 138, 0.8) 0%, rgba(212, 175, 55, 0.3) 70%, transparent 100%);
+  border: 1px dashed rgba(212, 175, 55, 0.5);
+  transition: opacity 0.2s ease;
+}
+
+@media (pointer: coarse) {
+  .aari-cursor-needle,
+  .aari-cursor-trail {
+    display: none !important;
+  }
+}

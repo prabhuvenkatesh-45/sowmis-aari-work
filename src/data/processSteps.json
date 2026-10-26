@@ -1,0 +1,42 @@
+[
+  {
+    "step": "01",
+    "title": "Bespoke Consultation & Silhouette",
+    "tagline": "Translating your wedding vision into silken reality",
+    "description": "We discuss your saree color palette, jewelry style, event lighting, and preferred neckline. You can share your mood board, Pinterest saves, or sketch ideas with our lead designer.",
+    "artisanDetail": "Personalized color swatching and neck-depth ergonomics tailored for heavy bridal jewelry.",
+    "icon": "MessageSquare"
+  },
+  {
+    "step": "02",
+    "title": "Khaka Blueprint & Motif Drafting",
+    "tagline": "The sacred geometry of royal embroidery",
+    "description": "Our master draftsman hand-sketches the 'Khaka' on tracing parchment to your exact bodily measurements. Every peacock feather, lotus petal, and border curve is calibrated to millimeter precision.",
+    "artisanDetail": "Pin-pricked stencil with herbal chalk powder transfer onto the stretched fabric.",
+    "icon": "PenTool"
+  },
+  {
+    "step": "03",
+    "title": "Adda Mounting & Aari Stitching",
+    "tagline": "Rhythmic hooked-needle symphony by master karigars",
+    "description": "The pure raw silk is tensioned over a traditional wooden 'Adda' frame. Using the hooked Aari needle (muthia), artisans meticulously loop pure metallic zari, sequins, dabka wire, and seed pearls.",
+    "artisanDetail": "Over 40,000 individual chain loops crafted purely by hand without any automated machinery.",
+    "icon": "Sparkles"
+  },
+  {
+    "step": "04",
+    "title": "Couture Lining, Padding & Finishing",
+    "tagline": "Invisible comfort beneath regal grandeur",
+    "description": "Heavy embroidery requires structured tailoring. We line the blouse with breathable, skin-friendly cotton voile, integrate seamless imported boning/cups, and finish with hand-sewn dori latkans.",
+    "artisanDetail": "Triple-stitched reinforced stress points so you move, sit, and dance with effortless grace.",
+    "icon": "Scissors"
+  },
+  {
+    "step": "05",
+    "title": "Heirloom Packaging & Global Dispatch",
+    "tagline": "Unboxing an enduring royal treasure",
+    "description": "Each finished ensemble undergoes 18-point quality inspection. It is swaddled in acid-free tissue paper, tucked into a signature gold-embossed keepsake box, and shipped via tracked express courier worldwide.",
+    "artisanDetail": "Includes complimentary zari preservation kit, moisture-absorbing silica, and fabric care guidelines.",
+    "icon": "PackageCheck"
+  }
+]

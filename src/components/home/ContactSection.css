@@ -1,0 +1,190 @@
+.aari-contact {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.aari-contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+/* Info Column */
+.aari-contact__info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aari-contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--surface);
+}
+
+.aari-contact-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--tag-bg);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.aari-contact-card__content {
+  flex: 1;
+}
+
+.card-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-primary);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 0.65rem;
+}
+
+.card-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  display: block;
+}
+
+.card-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Map Column */
+.aari-contact__map-col {
+  display: flex;
+}
+
+.aari-map-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  min-height: 480px;
+}
+
+.aari-map-canvas {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 380px;
+  background: #110E10;
+}
+
+.aari-map-pin-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: var(--surface-solid);
+  border: 1.5px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.15rem;
+  box-shadow: var(--shadow-md), var(--gold-glow);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 5;
+}
+
+.map-pin-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E53E3E;
+  box-shadow: 0 0 10px #E53E3E;
+  animation: mapPulse 1.8s infinite;
+}
+
+@keyframes mapPulse {
+  0% { transform: scale(0.9); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(0.9); opacity: 1; }
+}
+
+.map-pin-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-pin-info strong {
+  font-family: var(--font-serif);
+  font-size: 0.96rem;
+  color: var(--text-primary);
+}
+
+.map-pin-info span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.aari-map-bar {
+  padding: 1.35rem 1.75rem;
+  background: var(--surface-card);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.map-bar-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.map-bar-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: block;
+  max-width: 420px;
+}
+
+@media (max-width: 992px) {
+  .aari-contact__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .aari-map-wrapper {
+    min-height: 400px;
+  }
+}

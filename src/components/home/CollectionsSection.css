@@ -1,0 +1,363 @@
+.aari-collections {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+/* Controls Bar */
+.aari-collections__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Category Tabs */
+.aari-category-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.aari-category-tab {
+  position: relative;
+  padding: 0.55rem 1.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: color 0.25s ease;
+  z-index: 1;
+}
+
+.aari-category-tab:hover {
+  color: var(--text-primary);
+}
+
+.aari-category-tab.active {
+  color: #1A0F07;
+}
+
+.aari-category-tab__pill {
+  position: absolute;
+  inset: 0;
+  background: var(--gold-gradient);
+  border-radius: var(--radius-full);
+  z-index: -1;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
+/* Search & Sort */
+.aari-collections__search-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.aari-search-box {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+  max-width: 440px;
+}
+
+.aari-search-icon {
+  position: absolute;
+  left: 1.15rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-primary);
+  pointer-events: none;
+}
+
+.aari-search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2.85rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.aari-search-input:focus {
+  border-color: var(--border-gold);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.25);
+}
+
+.aari-search-clear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.aari-sort-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.45rem 1.15rem;
+}
+
+.aari-sort-icon {
+  color: var(--gold-primary);
+}
+
+.aari-sort-select {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.aari-sort-select option {
+  background: var(--surface-solid);
+  color: var(--text-primary);
+}
+
+/* Product Grid */
+.aari-collections__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.25rem;
+}
+
+/* Card */
+.aari-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.aari-card__media {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  background: #000;
+}
+
+.aari-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aari-card:hover .aari-card__img {
+  transform: scale(1.08);
+}
+
+.aari-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 8, 10, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.aari-card:hover .aari-card__overlay {
+  opacity: 1;
+}
+
+.aari-card__quick-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--surface-solid);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-md);
+  transform: translateY(10px);
+}
+
+.aari-card:hover .aari-card__quick-view {
+  transform: translateY(0);
+}
+
+.aari-card__quick-view:hover {
+  background: var(--gold-gradient);
+  color: #1A0F07;
+  border-color: transparent;
+}
+
+.aari-card__wishlist-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(13, 8, 10, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.aari-card__wishlist-btn:hover,
+.aari-card__wishlist-btn.active {
+  background: var(--surface-solid);
+  border-color: var(--gold-primary);
+  transform: scale(1.1);
+}
+
+.aari-card__category-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(13, 8, 10, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  color: var(--gold-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* Card Body */
+.aari-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.aari-card__hours-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.aari-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-bottom: 0.45rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.aari-card__title:hover {
+  color: var(--gold-primary);
+}
+
+.aari-card__technique {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.aari-card__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aari-card__price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.aari-card__price {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  line-height: 1;
+}
+
+.aari-card__price-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* No results */
+.aari-collections__no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-gold);
+  max-width: 520px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .aari-collections__search-sort {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .aari-search-box {
+    max-width: 100%;
+  }
+  .aari-card__media {
+    height: 320px;
+  }
+}

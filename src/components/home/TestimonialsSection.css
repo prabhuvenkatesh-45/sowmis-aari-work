@@ -1,0 +1,345 @@
+/* ==========================================================================
+   TESTIMONIALS SECTION — THREE-COLUMN LUXURY CAROUSEL
+   ========================================================================== */
+
+.aari-testimonials {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.aari-testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+/* ── Three-Column Layout ── */
+.aari-testimonials__carousel-wrap {
+  margin-top: 3rem;
+}
+
+.aari-testimonials__three-col {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* ── Side Columns ── */
+.aari-t-side-col {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--transition-normal);
+}
+
+.aari-t-side-col:hover {
+  opacity: 0.85;
+}
+
+/* ── Featured Card (Center) ── */
+.aari-testimonial-card {
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  position: relative;
+}
+
+.aari-testimonial-card--featured {
+  background: var(--surface-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-lg), var(--gold-glow);
+  padding: 2.5rem 2.25rem;
+}
+
+.aari-testimonial-card--featured::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed var(--border-stitched);
+  border-radius: calc(var(--radius-lg) - 6px);
+  pointer-events: none;
+}
+
+.aari-testimonial-card--side {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  padding: 1.4rem;
+}
+
+/* ── Quote Icon ── */
+.aari-t-quote-icon {
+  color: var(--gold-primary);
+  opacity: 0.35;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Stars ── */
+.aari-t-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 0.85rem;
+}
+
+.aari-t-side-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.65rem;
+}
+
+/* ── Outfit Badge ── */
+.aari-t-outfit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--tag-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Quote Text ── */
+.aari-t-quote {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+  quotes: none;
+}
+
+.aari-t-side-quote {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  quotes: none;
+}
+
+/* ── Client ── */
+.aari-t-client {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.aari-t-avatar-wrap {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border-gold);
+  box-shadow: var(--gold-glow);
+}
+
+.aari-t-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aari-t-client-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.aari-t-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.aari-t-role {
+  font-size: 0.8rem;
+  color: var(--gold-primary);
+  font-weight: 500;
+}
+
+.aari-t-date {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Side Card Client ── */
+.aari-t-side-client {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.aari-t-side-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--border-gold);
+  flex-shrink: 0;
+}
+
+.aari-t-side-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.aari-t-side-outfit {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ── Controls ── */
+.aari-testimonials__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.aari-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-gold);
+  background: var(--surface);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.aari-arrow-btn:hover {
+  background: var(--gold-primary);
+  color: #1A0F07;
+  box-shadow: var(--gold-glow);
+  transform: scale(1.08);
+}
+
+.aari-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.aari-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-gold);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.aari-carousel-dot.active {
+  width: 24px;
+  border-radius: var(--radius-full);
+  border-color: var(--gold-primary);
+}
+
+.aari-dot-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--gold-primary);
+  border-radius: var(--radius-full);
+}
+
+/* ── Stats Bar ── */
+.aari-testimonials__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.75rem 2.5rem;
+  background: var(--surface-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.aari-t-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.aari-t-stat-num {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: var(--gold-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.aari-t-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.aari-t-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-subtle);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .aari-testimonials__three-col {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .aari-t-side-col {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .aari-testimonial-card--featured {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .aari-testimonials__stats {
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .aari-t-stat-divider {
+    display: none;
+  }
+}

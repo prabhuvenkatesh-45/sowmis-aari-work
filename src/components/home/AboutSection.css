@@ -1,0 +1,252 @@
+.aari-about {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.aari-about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+/* Media Cluster */
+.aari-about__image-cluster {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.aari-about__main-image-wrap {
+  position: relative;
+  width: 86%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.aari-about__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.aari-about__main-image-wrap:hover .aari-about__main-img {
+  transform: scale(1.04);
+}
+
+.aari-about__detail-image-wrap {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 220px;
+  height: 240px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--gold-glow);
+}
+
+.aari-about__detail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aari-about__stamp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(117, 20, 40, 0.85);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.65rem;
+  color: #FFFDF8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.aari-about__quote-card {
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  max-width: 260px;
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.aari-about__quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+}
+
+.aari-about__quote-author {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gold-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Narrative */
+.aari-about__subheading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.aari-about__paragraph {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.aari-about__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.aari-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.aari-pillar__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--tag-bg);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.aari-pillar__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.aari-pillar__desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Counters Wrap */
+.aari-about__counters-wrap {
+  padding: 3rem 2.5rem;
+  background: var(--surface);
+  position: relative;
+}
+
+.aari-counters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.aari-counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.aari-counter-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--border-subtle), transparent);
+}
+
+.aari-counter__number {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 700;
+  background: var(--gold-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.aari-counter-label {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.aari-counter-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  max-width: 190px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .aari-about__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .aari-counters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  .aari-counter-item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .aari-about__main-image-wrap {
+    width: 100%;
+    height: 380px;
+  }
+  .aari-about__detail-image-wrap {
+    width: 160px;
+    height: 180px;
+    bottom: -20px;
+  }
+  .aari-about__quote-card {
+    left: 10px;
+    top: 10px;
+    max-width: 220px;
+  }
+  .aari-counters-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .aari-counter-item::after {
+    display: none !important;
+  }
+}

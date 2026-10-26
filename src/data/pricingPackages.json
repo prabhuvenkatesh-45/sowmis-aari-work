@@ -1,0 +1,82 @@
+[
+  {
+    "id": "simple-bead-stone",
+    "name": "Simple Bead & Stone Work",
+    "badge": "Everyday Elegance",
+    "tagline": "Delicate border work for simple pattu, festive & daily wear blouses",
+    "startingPrice": "₹500",
+    "priceSub": "fixed border work",
+    "duration": "12 – 18 Craft Hours",
+    "delivery": "3 – 5 Working Days",
+    "popular": false,
+    "features": [
+      "Back neckline neat border work",
+      "Front neckline matching border",
+      "Both sleeves border finish",
+      "Choice of antique gold, silver or matching beads",
+      "Premium quality stones that never tarnish",
+      "Perfect for office wear, simple functions & festive pujas"
+    ],
+    "idealFor": "Simple Pattu Blouses, College Functions, Everyday Elegance"
+  },
+  {
+    "id": "minimal-work",
+    "name": "Minimal Work & Sleeve Jaal",
+    "badge": "Most Popular",
+    "tagline": "Floral patterns, all-over buttas and complete covered sleeve designs",
+    "startingPrice": "₹600 – ₹2,000",
+    "priceSub": "based on sleeve coverage",
+    "duration": "24 – 36 Craft Hours",
+    "delivery": "5 – 8 Working Days",
+    "popular": true,
+    "features": [
+      "Floral pattern + Buttas + Big border (Starting from ₹600)",
+      "Minimal border work + Complete covered work on sleeves (₹1,000 – ₹2,000)",
+      "Intricate French knots, cutdana bugle beads & rice pearls",
+      "Custom color matching with your saree body & pallu",
+      "Neat back neck motif & sleeve bunches",
+      "Carefully hand-stretched on teakwood adda frame"
+    ],
+    "idealFor": "Engagements, Sangeet, Bridesmaids, Baby Showers & Festivals"
+  },
+  {
+    "id": "bridal-work",
+    "name": "Bridal Aari Work",
+    "badge": "Couture Bridal",
+    "tagline": "Dense, opulent hand embroidery crafted for your singular wedding day",
+    "startingPrice": "₹2,500 – ₹5,000+",
+    "priceSub": "as per design & material density",
+    "duration": "48 – 90 Craft Hours",
+    "delivery": "8 – 15 Working Days",
+    "popular": false,
+    "features": [
+      "Minimal bridal work tier: ₹2,500 – ₹5,000",
+      "Heavy royal bridal work: ₹5,000+ (customized as per design)",
+      "Dense kundan stones, zardozi dabka & 3D floral embroidery",
+      "Grand peacock, elephant or temple jewelry motifs on sleeves",
+      "Full back neck jaal with rich sweetheart / round neckline styling",
+      "Choice of matching latkans & hanging bell jhumkis"
+    ],
+    "idealFor": "Muhurtham Silk Sarees, Wedding Receptions, Royal Trousseau"
+  },
+  {
+    "id": "net-attached-work",
+    "name": "Net Attached Designer Work",
+    "badge": "Trendy Modern",
+    "tagline": "Sheer net fabric inserts with intricate cutwork embroidery",
+    "startingPrice": "₹1,000 – ₹4,000",
+    "priceSub": "by placement & design",
+    "duration": "20 – 40 Craft Hours",
+    "delivery": "7 – 12 Working Days",
+    "popular": false,
+    "features": [
+      "Sleeves only net work: ₹1,000 – ₹2,000",
+      "Back neck net illusion panel: ₹1,000 – ₹2,500",
+      "Both back and sleeves net work: ₹2,500 – ₹4,000",
+      "Seamless cutwork along the sheer mesh margins",
+      "Reinforced stitching that prevents fraying or tearing",
+      "Modern trendy party look for silk and fancy sarees"
+    ],
+    "idealFor": "Modern Brides, Reception Lehengas, Designer Party Blouses"
+  }
+]

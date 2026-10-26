@@ -1,0 +1,496 @@
+/* ==========================================================================
+   AARIWORK ATELIER - LUXURY DESIGN SYSTEM & GLOBAL STYLES
+   Bespoke Handcrafted Hand Embroidery Boutique
+   ========================================================================== */
+
+:root {
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Luxury Accents (Shared) */
+  --gold-primary: #D4AF37;
+  --gold-light: #F7E7B4;
+  --gold-dark: #A67C1E;
+  --gold-gradient: linear-gradient(135deg, #FDE68A 0%, #D4AF37 50%, #996515 100%);
+  --gold-text-gradient: linear-gradient(135deg, #FFE79A 0%, #D4AF37 45%, #AA7818 100%);
+  --maroon-gradient: linear-gradient(135deg, #6B1124 0%, #3F0611 100%);
+}
+
+/* ==========================================================================
+   THEMES: LIGHT (IVORY & MAROON) vs DARK (MIDNIGHT VELVET & GOLD)
+   ========================================================================== */
+
+/* DARK MODE (Default Royal Velvet Atelier) */
+:root, [data-theme="dark"] {
+  --bg-primary: #0D080A;
+  --bg-secondary: #160D12;
+  --bg-tertiary: #20131A;
+  --surface: rgba(26, 16, 22, 0.82);
+  --surface-card: rgba(29, 18, 25, 0.75);
+  --surface-hover: rgba(43, 27, 37, 0.9);
+  --surface-solid: #1B1017;
+
+  --text-primary: #FDFBF7;
+  --text-secondary: #D9CBC4;
+  --text-muted: #9E8C85;
+  --text-inverse: #0D080A;
+
+  --maroon-primary: #751428;
+  --maroon-deep: #480A17;
+  --maroon-accent: #9A1C36;
+
+  --border-subtle: rgba(212, 175, 55, 0.16);
+  --border-gold: rgba(212, 175, 55, 0.45);
+  --border-stitched: rgba(212, 175, 55, 0.35);
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
+  --gold-glow: 0 0 25px rgba(212, 175, 55, 0.28);
+  --maroon-glow: 0 0 30px rgba(117, 20, 40, 0.35);
+
+  --nav-bg: rgba(13, 8, 10, 0.82);
+  --card-stitch: #D4AF37;
+  --tag-bg: rgba(212, 175, 55, 0.12);
+}
+
+/* LIGHT MODE (Ivory Silk & Royal Ruby) */
+[data-theme="light"] {
+  --bg-primary: #FCFBF8;
+  --bg-secondary: #F6F1E9;
+  --bg-tertiary: #EDE4D8;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-card: rgba(255, 255, 255, 0.85);
+  --surface-hover: #FFFFFF;
+  --surface-solid: #FFFFFF;
+
+  --text-primary: #211617;
+  --text-secondary: #584947;
+  --text-muted: #857270;
+  --text-inverse: #FDFBF7;
+
+  --maroon-primary: #630C1E;
+  --maroon-deep: #420612;
+  --maroon-accent: #86162D;
+
+  --border-subtle: rgba(184, 134, 11, 0.18);
+  --border-gold: rgba(184, 134, 11, 0.4);
+  --border-stitched: rgba(184, 134, 11, 0.35);
+
+  --shadow-sm: 0 4px 14px rgba(74, 14, 23, 0.05);
+  --shadow-md: 0 12px 32px rgba(74, 14, 23, 0.08);
+  --shadow-lg: 0 24px 55px rgba(74, 14, 23, 0.12);
+  --gold-glow: 0 0 20px rgba(212, 175, 55, 0.2);
+  --maroon-glow: 0 0 25px rgba(99, 12, 30, 0.15);
+
+  --nav-bg: rgba(252, 251, 248, 0.88);
+  --card-stitch: #B8860B;
+  --tag-bg: rgba(99, 12, 30, 0.08);
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  background-image: 
+    radial-gradient(ellipse at 8% 15%, rgba(212, 175, 55, 0.04) 0%, transparent 45%),
+    radial-gradient(ellipse at 92% 85%, rgba(117, 20, 40, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.015) 0%, transparent 60%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--maroon-primary);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* ==========================================================================
+   GLOBAL LAYOUT UTILITIES
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 6.5rem 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+}
+
+/* Luxury Gold Text Gradient */
+.gold-text {
+  background: var(--gold-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes zariShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.zari-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(253, 230, 138, 0.4) 50%,
+    rgba(212, 175, 55, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: zariShimmer 4s infinite linear;
+}
+
+/* Stitched Border Detail */
+.stitched-card {
+  background: var(--surface-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.stitched-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed var(--border-stitched);
+  border-radius: calc(var(--radius-lg) - 6px);
+  pointer-events: none;
+  transition: border-color var(--transition-normal);
+}
+
+.stitched-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), var(--gold-glow);
+  border-color: var(--border-gold);
+}
+
+.stitched-card:hover::before {
+  border-color: var(--gold-primary);
+}
+
+/* Thread Divider */
+.thread-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 2.5rem;
+  max-width: 320px;
+}
+
+.thread-divider .thread-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.thread-divider .thread-needle {
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Luxury Badge */
+.gold-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-subtle);
+  color: var(--gold-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Global Glass Panel */
+.glass-panel {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Wishlist Global Toast */
+.wishlist-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  background: var(--surface-solid);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.4rem;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-lg), var(--gold-glow);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  animation: slideInUp 0.3s ease;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   GLOBAL LUXURY UTILITIES & ANIMATIONS
+   ========================================================================== */
+
+/* Section Separator */
+.aari-section-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  gap: 1.5rem;
+}
+
+.aari-section-separator::before,
+.aari-section-separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  opacity: 0.3;
+}
+
+.aari-section-separator__icon {
+  color: var(--gold-primary);
+  opacity: 0.6;
+  font-size: 1rem;
+  animation: spinSlow 12s linear infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Glowing Gold Text Highlight */
+.gold-glow-text {
+  color: var(--gold-primary);
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Luxury Section Decorative Side Border */
+.luxury-border-left {
+  border-left: 3px solid;
+  border-image: var(--gold-gradient) 1;
+  padding-left: 1.25rem;
+}
+
+/* Embroidery Pattern Background Overlay */
+.embroidery-bg {
+  position: relative;
+}
+
+.embroidery-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--gold-primary) 0,
+    var(--gold-primary) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* Pulse Animation for Badges */
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(212, 175, 55, 0); }
+}
+
+.gold-pulse {
+  animation: goldPulse 2.5s ease-in-out infinite;
+}
+
+/* Floating element animation */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+/* Rich text gradient underline */
+.fancy-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.fancy-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  border-radius: var(--radius-full);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.fancy-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Luxury number badge */
+.luxury-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  color: #1A0F07;
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-family: var(--font-serif);
+  flex-shrink: 0;
+}
+
+/* Image lazy load fade */
+img[loading='lazy'] {
+  transition: opacity 0.4s ease;
+}
+
+/* Responsive container */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
